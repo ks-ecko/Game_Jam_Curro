@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class SliderBrillo
+public class SliderBrillo : MonoBehaviour
 {
     public Slider slider;
     public float sliderValue;
