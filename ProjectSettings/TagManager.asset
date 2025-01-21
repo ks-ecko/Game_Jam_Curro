@@ -8,6 +8,7 @@ TagManager:
   - FallDetector
   - CheckPoint
   - Coleccionable
+  - PhotoArea
   layers:
   - Default
   - TransparentFX
