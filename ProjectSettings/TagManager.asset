@@ -10,6 +10,7 @@ TagManager:
   - Coleccionable
   - PhotoArea
   - Pila
+  - a
   layers:
   - Default
   - TransparentFX

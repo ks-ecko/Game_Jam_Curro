@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using TMPro;
 
 public class LogicaPersonaje1 : MonoBehaviour
 {
@@ -9,11 +7,6 @@ public class LogicaPersonaje1 : MonoBehaviour
     private Vector3 targetScale;
     private float targetHeight;
     private Vector3 targetCenter;
-
-    // UI
-    private int puntuacion;
-    public TMP_Text pts;
-    public int contador;
 
     // Movimiento y animaciones
     public float velocidadMovimiento = 5.0f;
@@ -29,17 +22,11 @@ public class LogicaPersonaje1 : MonoBehaviour
     private CapsuleCollider col;
     public Transform cam;
 
-    void Awake()
-    {
-        puntuacion = 0;
-    }
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>(); // Obtén el collider del personaje
         velocidadBase = velocidadMovimiento; // Guardar la velocidad inicial
-        actualizarPts();
 
         // Establece los valores iniciales de la escala, altura y centro del collider
         targetScale = transform.localScale;
@@ -110,21 +97,11 @@ public class LogicaPersonaje1 : MonoBehaviour
             targetHeight = 2f; // Altura del collider en posición normal
             targetCenter = new Vector3(0, 0, 0); // Centro del collider en posición normal
         }
-    }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Coleccionable"))
+        // Reseteamos la escala de la cámara para evitar que se vea afectada por el cambio de escala del jugador
+        if (cam != null)
         {
-            other.gameObject.SetActive(false);
-            contador++;
-            puntuacion++;
-            actualizarPts();
+            cam.localScale = new Vector3(1, 1, 1); // Esto asegura que la cámara no se vea afectada por el cambio de escala
         }
-    }
-
-    void actualizarPts()
-    {
-        pts.text = "Puntuación: " + puntuacion.ToString();
     }
 }
