@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class Pinzas : MonoBehaviour
 {
+    public GameObject pinzas;
+    public GameObject ColliderCadena;
     public GameObject handPoint; // Punto donde se colocará el objeto
     private GameObject pickedObject = null;
     public bool pickedHVYobject;
-
+    
     void Update()
     {
         // Soltar el objeto
@@ -28,6 +30,11 @@ public class Pinzas : MonoBehaviour
             pickedObject.transform.SetParent(null); // Quitar la jerarquía
             pickedObject = null;
             pickedHVYobject = false;
+
+            if (pickedHVYobject == true)
+            {
+                ColliderCadena.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -79,6 +86,8 @@ public class Pinzas : MonoBehaviour
             pickedObject = other.gameObject;
 
             pickedHVYobject = true;
+
+
         }
     }
 
