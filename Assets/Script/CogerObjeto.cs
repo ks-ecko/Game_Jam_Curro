@@ -41,8 +41,11 @@ public class CogerObjeto : MonoBehaviour
         }
 
         // Ajustar la posición y rotación del objeto al `HandPoint`
+        // Alinea la rotación con el `HandPoint`
+        objeto.transform.SetParent(handPoint.transform);
+
         objeto.transform.position = handPoint.transform.position;
-        objeto.transform.rotation = handPoint.transform.rotation; // Alinea la rotación con el `HandPoint`
+        objeto.transform.rotation = handPoint.transform.rotation;
 
         // Asegurar orientación específica para la linterna (opcional)
         if (objeto.name == "Linterna") // Cambia este nombre según tu objeto
@@ -51,8 +54,7 @@ public class CogerObjeto : MonoBehaviour
         }
 
         // Hacer que el objeto sea hijo del `HandPoint`
-        objeto.transform.SetParent(handPoint.transform);
-
+     
         // Guardar el objeto recogido
         pickedObject = objeto;
     }
