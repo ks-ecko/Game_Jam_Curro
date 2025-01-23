@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Objeto
+  - FallDetector
+  - PhotoArea
+  - Pila
+  - Enemigo_2
   layers:
   - Default
   - TransparentFX

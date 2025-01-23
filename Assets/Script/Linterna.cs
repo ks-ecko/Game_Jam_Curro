@@ -6,6 +6,9 @@ using TMPro;
 
 public class Linterna : MonoBehaviour
 {
+    public float RangoLinterna = 15f; // Rango de la linterna
+    public Camera camara; // Cámara desde la cual se lanzará el Raycast
+
     public Light luzLinterna;
     public bool activLight;
     public float BateriaRest;
@@ -76,4 +79,16 @@ public class Linterna : MonoBehaviour
             Debug.Log("Batería recargada. Batería restante: " + BateriaRest);
         }
     }
+
+    void OnDrawGizmos()
+    {
+        // Dibujar un rayo que representa el rango de la linterna en la escena
+        if (camara != null)
+        {
+            Ray ray = camara.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawRay(ray.origin, ray.direction * RangoLinterna);
+        }
+    }
+
 }
