@@ -6,11 +6,17 @@ TagManager:
   tags:
   - Objeto
   - FallDetector
+<<<<<<< HEAD
   - CheckPoint
   - Coleccionable
   - PhotoArea
   - Pila
   - Pinzas
+=======
+  - PhotoArea
+  - Pila
+  - Enemigo_2
+>>>>>>> f0efc693cbf703f2336e3d604ef0b827f8896c94
   layers:
   - Default
   - TransparentFX
@@ -50,6 +56,7 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+<<<<<<< HEAD
   - Light Layer 1
   - Light Layer 2
   - Light Layer 3
@@ -57,3 +64,5 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
+=======
+>>>>>>> f0efc693cbf703f2336e3d604ef0b827f8896c94
