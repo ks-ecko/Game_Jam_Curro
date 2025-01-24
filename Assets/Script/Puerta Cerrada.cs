@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class Cadenas : MonoBehaviour
+public class Puertadellave : MonoBehaviour
 {
-    public GameObject cadena;
+    public GameObject puerta;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            cadena.SetActive (false);
+            puerta.SetActive(false);
         }
     }
 }
