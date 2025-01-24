@@ -90,5 +90,4 @@ public class Linterna : MonoBehaviour
             Gizmos.DrawRay(ray.origin, ray.direction * RangoLinterna);
         }
     }
-
 }
