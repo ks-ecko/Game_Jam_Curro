@@ -15,6 +15,7 @@ public class Linterna : MonoBehaviour
     public float AgoteBateria = 0.5f;
     public TMP_Text porcentaje;
     public float RecargaBat = 25f;
+    public GameObject AreadeStun;
 
     void Update()
     {
@@ -40,11 +41,14 @@ public class Linterna : MonoBehaviour
                 {
                     luzLinterna.enabled = true;
                     Debug.Log("Linterna encendida.");
+                    AreadeStun.gameObject.SetActive(true);
+                    
                 }
                 else
                 {
                     luzLinterna.enabled = false;
                     Debug.Log("Linterna apagada.");
+                    AreadeStun.gameObject.SetActive(false);
                 }
             }
             else
@@ -65,6 +69,7 @@ public class Linterna : MonoBehaviour
         {
             luzLinterna.enabled = false;
             activLight = false;
+            AreadeStun.gameObject.SetActive(false);
             Debug.Log("Linterna apagada debido a batería agotada.");
         }
     }

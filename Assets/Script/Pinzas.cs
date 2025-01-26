@@ -117,9 +117,17 @@ public class Pinzas : MonoBehaviour
         {
             ColliderCadena.gameObject.SetActive(true);
         }
+        else
+        {
+            ColliderCadena.gameObject.SetActive(false);
+        }
         if (keyAdquired == true)
         {
             ColliderPuertaCerrada.gameObject.SetActive(true);
+        }
+        else
+        {
+            ColliderPuertaCerrada.gameObject.SetActive(false);
         }
     }
 
