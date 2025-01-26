@@ -105,6 +105,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e4fe71f07b851c84f824e69cafba296a, type: 2}
+    - target: {fileID: 36874845600818784, guid: c02d2806573ede840a200079b21245b3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbcd2ed5906525c47a94ea47f10c5cba, type: 2}
     - target: {fileID: 919132149155446097, guid: c02d2806573ede840a200079b21245b3, type: 3}
       propertyPath: m_Name
       value: Pared diagonal

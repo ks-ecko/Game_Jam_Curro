@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8616918331824686214, guid: 91dd7f3b41a3ce742a31f6e04381e65d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbcd2ed5906525c47a94ea47f10c5cba, type: 2}
     - target: {fileID: 919132149155446097, guid: 91dd7f3b41a3ce742a31f6e04381e65d, type: 3}
       propertyPath: m_Name
       value: Pared esquina
@@ -72,6 +76,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e4fe71f07b851c84f824e69cafba296a, type: 2}
+    - target: {fileID: 8420901430456401750, guid: 91dd7f3b41a3ce742a31f6e04381e65d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbcd2ed5906525c47a94ea47f10c5cba, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
